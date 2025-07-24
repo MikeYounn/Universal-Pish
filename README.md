@@ -22,7 +22,7 @@ There are **two output files** to accommodate platform limitations:
 
 ### Why Split the Feeds?
 
-Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. and a maximum argument capacity of 10000 To ensure compatibility, i limited `UniversalPish_LIMITED.txt` to the latest 9500 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
+Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. and a maximum argument capacity of 10000. To ensure compatibility, i limited `UniversalPish_LIMITED.txt` to the latest 9500 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
 
 ---
 
