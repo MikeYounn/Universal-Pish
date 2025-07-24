@@ -13,7 +13,7 @@ The purpose of this project is to provide a centralized list of phishing domains
 
 ## 📁 Feeds
 
-We provide **two output files** to accommodate platform limitations:
+There are **two output files** to accommodate platform limitations:
 
 | Filename | Description |
 |----------|-------------|
