@@ -1,47 +1,40 @@
-# 🎣 UniversalPish — Unified Phishing URL Feed
+# 🎣 UniversalPhish
 
-**UniversalPish** is a centralized, deduplicated, and regularly updated list of known phishing URLs.  
-It aggregates multiple trusted public phishing intelligence sources into a single `.txt` file for easy consumption by:
+This repository contains regularly updated phishing domain feeds aggregated from **multiple public threat intelligence sources**. The feeds are processed and cleaned by a private script, and then pushed to this repository every hour.
 
-- 🔍 SOC teams and analysts
-- 🛡️ SIEM platforms (e.g., Sentinel, Splunk, etc.)
-- 🤖 Threat Intelligence pipelines
-- 🧪 Cybersecurity research
+## 🔍 About
+
+The purpose of this project is to provide a centralized list of phishing domains that can be used in:
+
+- SIEM tools (e.g., Microsoft Sentinel)
+- Detection engineering
+- Threat hunting
+- SOC monitoring and alerting
+
+## 📁 Feeds
+
+We provide **two output files** to accommodate platform limitations:
+
+| Filename | Description |
+|----------|-------------|
+| `UniversalPish_FULL.txt` | Contains **all known unique phishing domains** from public sources. Best for offline or bulk analysis. |
+| `UniversalPish_LIMITED.txt` | Contains **only the most recent 9,500 domains**, optimized to remain below **0.95 MB** for compatibility with Microsoft Sentinel analytic rules. |
+
+### Why Split the Feeds?
+
+Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. To ensure compatibility, we limit `UniversalPish_LIMITED.txt` to the latest 9,500 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
 
 ---
 
-## 📦 What's Inside?
-
-The core of this repository is:
-
-
-- ✅ Plaintext file (1 URL per line)
-- ✅ Updated **hourly** via private automation
-- ✅ Pulled from open-source threat intel feeds
-
----
-
-## 📡 Sources Used
-
-This feed currently aggregates phishing URLs from:
+## 🧠 Sources Aggregated
 
 - [OpenPhish](https://openphish.com/)
 - [PhishTank](https://phishtank.org/)
-- [URLHaus (Abuse.ch)](https://urlhaus.abuse.ch/)
-- [Phishing.Database (mitchellkrogza)](https://github.com/mitchellkrogza/Phishing.Database)
-
-More sources are being integrated.
+- [Abuse.ch URLHaus](https://urlhaus.abuse.ch/)
+- [Phishing.Database by Mitchell Krogza](https://github.com/mitchellkrogza/Phishing.Database)
 
 ---
 
-## 🧠 Use Cases
-
-- Correlate phishing domains/URLs in your SIEM
-- Enrich alerts with known indicators
-- Block phishing traffic at proxy/firewall
-- Feed into SOAR or detection pipelines
-
----
 
 ## ⚠️ Disclaimer
 
@@ -62,7 +55,3 @@ If you want to contribute or suggest feed sources, open an [Issue](https://githu
 This repository is distributed under an open and fair use security research principle.  
 
 ---
-
-## 📜 Note
-
-This repository was inspired by [NoMorePhish](https://github.com/NoMorePhish) and his [Tycoon2FADomains](https://github.com/NoMorePhish/Tycoon2FADomains) :")
