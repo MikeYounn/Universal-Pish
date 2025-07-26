@@ -18,11 +18,11 @@ There are **two output files** to accommodate platform limitations:
 | Filename | Description |
 |----------|-------------|
 | `UniversalPish_FULL.txt` | Contains **all known unique phishing domains** from public sources. Best for offline or bulk analysis. |
-| `UniversalPish_LIMITED.txt` | Contains **only the most recent 9,500 domains**, optimized to remain below **0.95 MB** for compatibility with Microsoft Sentinel analytic rules. |
+| `UniversalPish_LIMITED.txt` | Contains **only the most recent 10000 domains**, optimized to remain below **0.95 MB** for compatibility with Microsoft Sentinel analytic rules. |
 
 ### Why Split the Feeds?
 
-Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. and a maximum argument capacity of 10000. To ensure compatibility, i limited `UniversalPish_LIMITED.txt` to the latest 9500 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
+Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. and a maximum argument capacity of 10000. To ensure compatibility, i limited `UniversalPish_LIMITED.txt` to the latest 10000 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
 
 ---
 
