@@ -1,6 +1,6 @@
 # 🎣 UniversalPhish
 
-This repository contains regularly updated phishing domain feeds aggregated from **multiple public threat intelligence sources**. The feeds are processed and cleaned by a private script, and then pushed to this repository every X hours due to all funcitions contained to avoid false positives.
+This repository contains regularly updated phishing domain feeds aggregated from **multiple public threat intelligence sources**. The feeds are processed and cleaned by a private script, and then pushed to this repository every XX hours due to all funcitions contained to avoid false positives.
 
 ## 🔍 About
 
