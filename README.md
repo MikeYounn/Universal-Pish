@@ -1,6 +1,6 @@
 # 🎣 UniversalPhish
 
-This repository contains regularly updated phishing domain feeds aggregated from **multiple public threat intelligence sources**. The feeds are processed and cleaned by a private script, and then pushed to this repository every XX hours due to all funcitions contained to avoid false positives.
+This repository contains regularly updated phishing domain feeds aggregated from **multiple public threat intelligence sources**. The feeds are processed and cleaned by a private script, and then pushed to this repository every X hours.
 
 ## 🔍 About
 
@@ -25,16 +25,6 @@ There are **two output files** to accommodate platform limitations:
 Microsoft Sentinel imposes a strict size limit (~0.95 MB) on analytic rule match lists. and a maximum argument capacity of 10000. To ensure compatibility, i limited `UniversalPish_LIMITED.txt` to the latest 10000 domains, while still preserving the full dataset in `UniversalPish_FULL.txt`.
 
 ---
-
-## 🧠 Sources Aggregated
-
-- [OpenPhish](https://openphish.com/)
-- [PhishTank](https://phishtank.org/)
-- [Abuse.ch URLHaus](https://urlhaus.abuse.ch/)
-- [Phishing.Database by Mitchell Krogza](https://github.com/mitchellkrogza/Phishing.Database)
-
----
-
 
 ## ⚠️ Disclaimer
 
